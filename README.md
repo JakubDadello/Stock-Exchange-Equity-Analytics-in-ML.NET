@@ -12,7 +12,7 @@ The system incorporates sector-specific characteristics to support investment de
 
 3. Sector-Aware Intelligence: Models financial indicators (e.g., net_profit, ROA) while accounting for the unique nature of different industry sectors.
 
-4. Investment Grading: Automated assignment of investment levels based on robust multi-class classification.
+4. Investment Grading: Automated assignment of investment rating based on robust multi-class classification.
 
 ## Repository Structure
 - `PolishEquity.Analytics.Api/` - Model Serving & Inference: ASP.NET Core Web API providing real-time investment grading predictions via REST endpoints.
