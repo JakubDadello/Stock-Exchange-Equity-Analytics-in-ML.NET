@@ -1,41 +1,27 @@
+using Microsoft.Extensions.ML;
+using Schemas;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
-builder.Services.AddOpenApi();
+// Register the ML.NET PredictionEnginePool
+// English: Using PredictionEnginePool for thread-safe, scalable object pooling
+// This is essential for high-concurrency environments like a web API
+builder.Services.AddPredictionEnginePool<ModelInput, ModelOutput>()
+    .FromFile("LightGBM_model.zip");
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+// Prediction Endpoint
+// English: Minimal API endpoint for high-performance ML inference
+app.MapPost("/predict", (PredictionEnginePool<ModelInput, ModelOutput> pool, ModelInput input) =>
 {
-    app.MapOpenApi();
-}
+    // English: Executing the model prediction using the pooled engine
+    var predictions = pool.Predict(input);
+    
+    // Return the result with an HTTP 200 OK status
+    return Results.Ok(predictions);
+});
 
-app.UseHttpsRedirection();
-
-var summaries = new[]
-{
-    "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-};
-
-app.MapGet("/weatherforecast", () =>
-{
-    var forecast =  Enumerable.Range(1, 5).Select(index =>
-        new WeatherForecast
-        (
-            DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-            Random.Shared.Next(-20, 55),
-            summaries[Random.Shared.Next(summaries.Length)]
-        ))
-        .ToArray();
-    return forecast;
-})
-.WithName("GetWeatherForecast");
-
+// Start the web application
+// English: Listening on the port defined in Docker (8080)
 app.Run();
-
-record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
-{
-    public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
-}

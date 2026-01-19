@@ -17,4 +17,8 @@
     <PackageReference Include="Microsoft.ML" Version="5.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\PolishEquity.Analytics.Schemas\PolishEquity.Analytics.Schemas.csproj" />
+  </ItemGroup>
+
 </Project>

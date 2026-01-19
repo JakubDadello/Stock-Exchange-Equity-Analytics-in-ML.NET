@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PolishEquity.Analytics.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f32ab358a2dc6d236f28f31897e653478c0cae81")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1fd72aec1b34e47dd06f08e6b6365675cba650ec")]
 [assembly: System.Reflection.AssemblyProductAttribute("PolishEquity.Analytics.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PolishEquity.Analytics.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
