@@ -93,7 +93,7 @@ The model was evaluated using a hold-out test dataset consisting of financial re
 | Micro-Accuracy     | 0.746 |
 | LogLoss            | 0.641 |
 
-## Conclusions 
+### Conclusions 
 An average accuracy of 68.6% across all categories. The high Macro-Accuracy relative to Micro-Accuracy indicates that the model is robust and maintains predictive power even for minority classes (e.g., rare "High" growth opportunities).
 
 The evaluation confirms the the LightGBM model successfully captures the dependencies between financial ratios and final investment rating. Given the inherent volatility of the Warsaw Stock Exchange (GPW), an accuracy excedding 70% provides a strong foundation for an automated decision-support system.
