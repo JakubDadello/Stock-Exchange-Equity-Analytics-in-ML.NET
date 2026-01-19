@@ -51,9 +51,13 @@
         "net10.0": {
           "targetAlias": "net10.0",
           "dependencies": {
-            "Microsoft.AspNetCore.OpenApi": {
+            "Microsoft.Extensions.ML": {
               "target": "Package",
-              "version": "[10.0.0, )"
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.ML": {
+              "target": "Package",
+              "version": "[5.0.0, )"
             }
           },
           "imports": [
