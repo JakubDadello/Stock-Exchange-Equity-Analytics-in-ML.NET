@@ -34,7 +34,7 @@ To run this project locally, you can use either Docker (recommended) or the .NET
   docker build -t pqa_dotnet_api -f PolishEquity.Analytics.Api/Dockerfile .
 * **Run the container:**
   ```bash
-  docker run -d -p 8000:8000 --name pqa_dotnet_container pqa_dotnet_api
+  docker run -d -p 8001:8080 --name pqa_dotnet_container pqa_dotnet_api
 
 ### Using Python (Local Environment)
 * **Install requirements:**
