@@ -1,25 +1,14 @@
 services: 
-  external_model:
-    build:
-      context: ../Polish-Equity-Analytics
-      dockerfile: Dockerfile
-    ports: 
-      - "8001:8000"
-    networks:
-      - pq-analytics-network
-    
-  stacking-model:
+  api_dotnet_model:
     build: 
-      context: ./PolishEquity.Analytics.Stacking
+      context: .
       dockerfile: Dockerfile
-    depends_on:
-      - external_model
-    volumes:
-      - ./PolishEquity.Analytics.Stacking/Data:/app/Data
-      - ./PolishEquity.Analytics.Stacking/Models:/app/Models
-    networks:
-      - pq-analytics-network
-
-networks:
-  pq-analytics-network:
-    driver: bridge 
+    image: pqa_dotnet_api:latest
+    container_name: pqa_dotnet_container
+    ports: 
+      - "8001:8080"
+    restart: unless-stopped
+    environment:
+      - DOTNET_ENVIRONMENT=Production
+      - APP_ENV=production
+    
