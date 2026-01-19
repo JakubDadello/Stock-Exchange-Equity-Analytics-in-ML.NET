@@ -31,10 +31,10 @@ To run this project locally, you can use either Docker (recommended) or the .NET
 
 * **Build the image:**
   ```bash
-  docker build -t polish-equity-api -f PolishEquity.Analytics.Api/Dockerfile .
+  docker build -t model-dotnet-api -f PolishEquity.Analytics.Api/Dockerfile .
 * **Run the container:**
   ```bash
-  docker run -d -p 8000:8000 --name polish-equity-container polish-equity-api
+  docker run -d -p 8000:8000 --name model-dotnet-container polish-equity-api
 
 ### Using Python (Local Environment)
 * **Install requirements:**
