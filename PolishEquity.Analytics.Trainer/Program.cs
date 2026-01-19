@@ -1,7 +1,7 @@
 ﻿using Microsoft.ML;
 using DataOperations;     
 using Training;     
-using Schemas; 
+using Evaluating; 
 
 class Program
 {
@@ -13,8 +13,7 @@ class Program
         // Define paths
         // In Docker, these should point to your shared volumes
         string dataPath = Path.Combine("Data", "initial_labeling_data.csv");
-        string modelPath = Path.Combine("..", "PolishEquity.Analytics.Stacking", "Models", "LightGBM_model.zip");
-        string stackingDataPath = Path.Combine("..", "PolishEquity.Analytics.Stacking", "Data", "stacking_input.csv");
+        string modelPath = Path.Combine("..", "PolishEquity.Analytics.Api", "Models", "LightGBM_model.zip");
 
         Console.WriteLine("Loading data...");
         // 2. Load Data from CSV
@@ -29,32 +28,17 @@ class Program
         // 4. Train the base model (C# Expert)
         ITransformer model = BoosterTrainer.Train(ml, trainingData);
 
-        // 5. Save the trained ML.NET model
+        // 5. Evaluation 
+        Console.WriteLine("Evaluating Model...");
+        var metrics = Evaluator.EvaluateModel (ml, model, testData);
+
+        Console.WriteLine($"MacroAccuracy:{metrics.MacroAccuracy: 0.###}");
+        Console.WriteLine($"MicroAccuracy:{metrics.MicroAccuracy: 0.###}");
+        Console.WriteLine($"LogLoss:{metrics.LogLoss: 0.###}");
+
+        // 6. Save the trained ML.NET model
         Directory.CreateDirectory(Path.GetDirectoryName(modelPath)!);
         ml.Model.Save(model, trainingData.Schema, modelPath);
         Console.WriteLine($"Model saved to: {modelPath}");
-
-        // 6. Generate predictions on the test set for Stacking
-        // This adds the 'Score' columns needed by the Python Meta-Learner
-        IDataView predictions = model.Transform(testData);
-
-        // 7. Save predictions to CSV
-        Directory.CreateDirectory(Path.GetDirectoryName(stackingDataPath)!);
-
-        // Select only the relevant output columns required by the Python Meta‑learner
-        var selectedColumns = ml.Transforms.SelectColumns("Label", "Score", "PredictedLabel");
-        var selectedData = selectedColumns.Fit(predictions).Transform(predictions);
-
-        var cleanEnumerable = ml.Data.CreateEnumerable<ModelOutput>(selectedData, reuseRowObject: false);
-        var cleanDataView = ml.Data.LoadFromEnumerable(cleanEnumerable);
-
-        // Persist the filtered prediction dataset as a CSV file for downstream stacking
-        using (var stream = new FileStream(stackingDataPath, FileMode.Create))
-        {
-            ml.Data.SaveAsText(cleanDataView, stream, separatorChar: ',', headerRow: true);
-        }
-
-        Console.WriteLine($"Stacking input CSV saved to: {stackingDataPath}");
-        Console.WriteLine("Training pipeline completed successfully.");
     }
 }
