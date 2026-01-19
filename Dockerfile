@@ -24,6 +24,9 @@ FROM mcr.microsoft.com/dotnet/aspnet:10.0 AS final
 WORKDIR /app
 EXPOSE 8080
 
+# Copy the trained ML model into the publish directory
+COPY PolishEquity.Analytics.Api/LightGBM_model.zip /app/publish/
+
 # Copy only the compiled binaries from the publish stage
 COPY --from=publish /app/publish .
 
