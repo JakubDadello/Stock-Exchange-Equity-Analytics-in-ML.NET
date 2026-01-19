@@ -16,7 +16,8 @@ The system incorporates sector-specific characteristics to support investment de
 
 ## Repository Structure
 - `PolishEquity.Analytics.Api/` - Model Serving & Inference: ASP.NET Core Web API providing real-time investment grading predictions via REST endpoints.
-- `PolishEquity.Analytics.Schemas/` - Data Contracts (folder Schemas): Shared Class Library containing strictly typed input/output models used across the entire solution.
+- `PolishEquity.Analytics.Schemas/` - Data Contracts: Shared Class Library containing strictly typed input/output models used across the entire solution. see(Polish-Equity-Analytics-.NET-LightGBM-Predictor/PolishEquity.Analytics.Schemas/Schemas
+/Schemas.cs)
 - `PolishEquity.Analytics.Trainer/` - ML Pipeline: Console application dedicated to Data Preprocessing, LightGBM Model Training, and Evaluation. (see PolishEquity.Analytics.Trainer/README.md)
 - `CRISP-DM.md` - detailed methodology workflow
 
