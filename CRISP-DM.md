@@ -98,4 +98,24 @@ An average accuracy of 68.6% across all categories. The high Macro-Accuracy rela
 
 The evaluation confirms the the LightGBM model successfully captures the dependencies between financial ratios and final investment rating. Given the inherent volatility of the Warsaw Stock Exchange (GPW), an accuracy excedding 70% provides a strong foundation for an automated decision-support system.
 
+# Deployment 
+The analytical model developed in this project, based on the CRISP-DM methodology and implemented using the LightGBM algorithm, is not yet suitable for full deployment. It requires several further actions, primarily related to:
+
+1. Structural Modifications: Increase the number of numerical and categorical attributes to allow the model to account for a larger set of factors determining capital investment attractiveness.
+
+2. Dataset Expansion: Include more companies to enhance the system's applicability to international financial markets.
+
+3. Further Exploration of Gradient Boosting: While LightGBM was chosen for this implementation due to its high efficiency, further tuning of hyperparameters (such as learning rate and tree depth) could stabilize the results even more.
+
+4. Technological Context: A related implementation of the same problem using the Random Forest algorithm within the Python ecosystem is available at the following repository: https://github.com/JakubDadello/Polish-Equity-Analytics.git
+
+4. Deep Learning Possibilities: With an increase in structural complexity, exploring ML.NET's capabilities for deep learning or integration with ONNX models could achieve even greater effectiveness.
+
+The project aimed to create a classification system that automatically evaluates a company’s investment attractiveness based on financial statement medians and sector membership. This objective was largely met.
+
+Although the model remains in the prototype phase, the project includes a fully functional technical deployment pipeline (ASP.NET Core 10 & Docker), ensuring that once the model is refined, it can be seamlessly integrated into a production environment.
+
+
+
+
 
