@@ -7,3 +7,4 @@ This directory contains the core machine learning logic, data ingestion, preproc
 - `Preprocessing/` - defines the ML.NET Estimator Chain.
 - `Utils/` - contains DataLoader responsible for lazy-loading data into IDataView and managing file system paths.
 - `Training/` - contains the script for LightGBM multiclass classification configuration.
+- `Evaluate/` – contains model evaluation logic and computes MacroAccuracy, MicroAccuracy, and LogLoss metrics.
