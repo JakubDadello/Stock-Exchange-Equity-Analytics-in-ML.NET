@@ -1,0 +1,25 @@
+services: 
+  external_model:
+    build:
+      context: ../Polish-Equity-Analytics
+      dockerfile: Dockerfile
+    ports: 
+      - "8001:8000"
+    networks:
+      - pq-analytics-network
+    
+  stacking-model:
+    build: 
+      context: ./PolishEquity.Analytics.Stacking
+      dockerfile: Dockerfile
+    depends_on:
+      - external_model
+    volumes:
+      - ./PolishEquity.Analytics.Stacking/Data:/app/Data
+      - ./PolishEquity.Analytics.Stacking/Models:/app/Models
+    networks:
+      - pq-analytics-network
+
+networks:
+  pq-analytics-network:
+    driver: bridge 
