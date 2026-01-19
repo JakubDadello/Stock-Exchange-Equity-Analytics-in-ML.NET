@@ -3,7 +3,7 @@
 ## Project Description
 This project is an enterprise-grade evolution of the Polish-Equity-Analytics system (https://github.com/JakubDadello/Polish-Equity-Analytics.git). It utilizes C# and ML.NET to analyze financial data from 370 Polish listed companies (GPW).
 
-The system incorporates sector-specific characteristics to support investment decision-making by classifying companies into three investment levels: Low, Medium, and High.
+The system incorporates sector-specific characteristics to support investment decision-making by classifying companies into three investment rating: Low, Medium, and High.
 
 ### Key Features
 1. Technology Shift: Transitioned from Python to the .NET 9 ecosystem for better performance and enterprise integration.
