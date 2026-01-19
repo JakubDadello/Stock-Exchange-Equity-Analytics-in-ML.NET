@@ -2,8 +2,6 @@
 
 This folder contains all the datasets used in the project.
 
----
-
 ## 1. raw_data.csv
 - **Description:** Financial data for 370 Polish listed companies from the Warsaw Stock Exchange (GPW)
 - **Source:** Official GPW website
@@ -17,8 +15,6 @@ This folder contains all the datasets used in the project.
   - `sector`: Industry sector
   - `cumulation`: Reporting type (quarterly, semi-annual)
 
----
-
 ## 2. initial_labeling_data.csv
 - **Description:** Investment rating labels for GPW companies
 - **Labels:** low / medium / high
@@ -30,8 +26,6 @@ This folder contains all the datasets used in the project.
   - No missing labels
 - **Scripts:**
   - SQL script `initial_labeling_sql` used to generate `initial_labeling_data.csv`.
-
----
 
 ## 3. preprocessed_data.csv
 - **Description:** Preprocessed dataset ready for machine learning. Combines features from `initial_labeling_data.csv` with preprocessing applied to numerical and categorical variables.  
