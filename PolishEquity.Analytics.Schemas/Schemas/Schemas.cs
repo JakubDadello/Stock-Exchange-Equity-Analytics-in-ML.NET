@@ -22,7 +22,7 @@ namespace Schemas
         // The target column we want to predict
         [LoadColumn(9)]
         [ColumnName("Label")]
-        public string InvestmentAssessment { get; set; } = "";
+        public string InvestmentRating { get; set; } = "";
     }
 
     /// <summary>
@@ -39,6 +39,6 @@ namespace Schemas
         public float[] Score { get; set; } = Array.Empty<float>();
 
         [ColumnName("PredictedLabel")] 
-        public string InvestmentAssessment { get; set; } = "";
+        public string InvestmentRating{ get; set; } = "";
     }
 }
