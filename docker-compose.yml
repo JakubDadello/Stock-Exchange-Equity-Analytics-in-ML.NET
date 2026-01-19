@@ -11,4 +11,3 @@ services:
     environment:
       - DOTNET_ENVIRONMENT=Production
       - APP_ENV=production
-    
