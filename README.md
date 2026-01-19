@@ -52,4 +52,4 @@ To run this project locally, you can use either Docker (recommended) or the .NET
 - API Framework: ASP.NET Core 
 - Backend & Deployment: Docker 
 
-Consistent with the research conducted in the Polish-Equity-Analytics project (https://github.com/JakubDadello/Polish-Equity-Analytics.git), this repository maintains the same data processing standards. The documentation aligns with the original project's structure but is adapted for the ML.NET ecosystem. Detailed process descriptions are available in CRISP-DM.md."
+Consistent with the research conducted in the Polish-Equity-Analytics project (https://github.com/JakubDadello/Polish-Equity-Analytics.git), this repository maintains the same data processing standards. The documentation aligns with the original project's structure but is adapted for the ML.NET ecosystem. Detailed process descriptions are available in [CRISP-DM.md](CRISP-DM.md).
