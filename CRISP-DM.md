@@ -64,10 +64,26 @@ Data Preparation was implemented as a structured, repeatable pipeline using ML.N
 real-time inference through the API.
 
 Data Preparation Steps Conducted in the Project:
+
 1. Exporting the Excel file containing the raw data.
-2. Separating the label column (investment level) from the rest of the data.
-3. 
+2. Separating the label column (investment rating) from the rest of the data.
+3. Splitting the comprehensive dataset into numerical and categorical data.
+4. Define numerical features used for preprocessing: NetIncome, NetCashFlow, ROE, ROA, EBITDA, Cumulation.
+5. Combine these numerical columns into a single vector: `numeric_vector`.
+6. Impute missing values in `numeric_vector` using mean replacement, resulting in `numeric_imputed`.
+7. Normalize the imputed numerical features to the [0,1] range, producing `numeric_scaled`.
+8. Apply One-Hot-Encoding to the categorical `Sector` column, producing `sectored_encoded`.
+9. Concatenate `numeric_scaled` and `sector_encoded` into the final `Features` column, which will serve as input to the LightGBM model.
 
+# Modeling
+The objective of this project was to create a classification model that assigns an investment rating to each company, reflecting its financial condition and taking into account its sector affiliation.
 
+In the modeling phase, the project utilizes the LightGBM (Light Gradient Boosting Machine) algorithm. This choice was dictated by the algorithm's superior performance in processing structured financial datasets and its ability to handle multi-class classfiication tasks with high efficiency. 
+
+Textual investment ratings (Low, Medium, High) are mapped to numerical keys using `MapValueToKey`, enabling the mathematical engine to process categorizing.
+
+LightGBM Multiclass Trainer was selected due to its gradient-based learning approach, which is highly effectivte at capturing non-linear relations between financial indicators.
+
+# Evaluation
 
 
