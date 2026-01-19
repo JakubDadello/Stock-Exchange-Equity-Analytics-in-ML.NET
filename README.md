@@ -6,7 +6,7 @@ This project is an enterprise-grade evolution of the Polish-Equity-Analytics sys
 The system incorporates sector-specific characteristics to support investment decision-making by classifying companies into three investment rating: Low, Medium, and High.
 
 ### Key Features
-1. Technology Shift: Transitioned from Python to the .NET 9 ecosystem for better performance and enterprise integration.
+1. Technology Shift: Transitioned from Python to the .NET 10 ecosystem for better performance and enterprise integration.
 
 2. Advanced Modeling: Replaced Random Forest with LightGBM (Gradient Boosting Machine) to enhance predictive accuracy on complex financial tabular data.
 
