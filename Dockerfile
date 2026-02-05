@@ -3,7 +3,6 @@ FROM mcr.microsoft.com/dotnet/sdk:10.0 AS build
 WORKDIR /app
 
 # Copy project files and restore dependencies
-# English: Restoring before full copy to leverage Docker layer caching
 COPY ["PolishEquity.Analytics.Api/PolishEquity.Analytics.Api.csproj", "PolishEquity.Analytics.Api/"]
 COPY ["PolishEquity.Analytics.Trainer/PolishEquity.Analytics.Trainer.csproj", "PolishEquity.Analytics.Trainer/"]
 RUN dotnet restore "PolishEquity.Analytics.Api/PolishEquity.Analytics.Api.csproj"
@@ -14,12 +13,10 @@ WORKDIR "/app/PolishEquity.Analytics.Api"
 RUN dotnet build "PolishEquity.Analytics.Api.csproj" -c Release -o /app/build
 
 # Publish the application to a dedicated folder
-# English: Using Release configuration for production-ready performance
 FROM build AS publish
 RUN dotnet publish "PolishEquity.Analytics.Api.csproj" -c Release -o /app/publish /p:UseAppHost=false
 
 # Use the lightweight ASP.NET runtime image for the final stage
-# English: Minimizing the attack surface and image size by excluding the SDK
 FROM mcr.microsoft.com/dotnet/aspnet:10.0 AS final
 WORKDIR /app
 EXPOSE 8080
