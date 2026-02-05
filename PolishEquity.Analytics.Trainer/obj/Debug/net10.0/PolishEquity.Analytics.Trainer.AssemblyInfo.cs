@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PolishEquity.Analytics.Trainer")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2ef65a1f882a859c47e6812f7644ab582b324202")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1072f3e3f828408d1824c0602887ae2b2f3f4d88")]
 [assembly: System.Reflection.AssemblyProductAttribute("PolishEquity.Analytics.Trainer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PolishEquity.Analytics.Trainer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
