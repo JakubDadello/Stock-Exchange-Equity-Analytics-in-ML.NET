@@ -36,14 +36,12 @@ To run this project locally, you can use either Docker (recommended) or the .NET
   ```bash
   docker run -d -p 8001:8080 --name pqa_dotnet_container pqa_dotnet_api
 
-### Using Python (Local Environment)
-* **Install requirements:**
+### Using ASP.NET Core (Local Environment)
+
+* **Launch ASP.NET Core binding to all interfaces:**
   ```bash
-  pip install -r requirements.txt
-* **Launch FastAPI server:**
-  ```bash
-  uvicorn src.main:app --host 0.0.0.0 --port 8000
-  
+  dotnet run --urls "http://0.0.0.0:8000"
+
 ## Tech Stack
 
 - Language & Runtime: C# 13/ .NET 10 SDK
