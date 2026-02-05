@@ -1,12 +1,12 @@
--- ==================================================================
--- initial_labeling.sql
--- Purpose: Generate investment level labels (low/medium/high) 
---          for companies based on sector-level median financial indicators.
--- Input: raw_data table (imported from raw_data.csv)
--- Output: initial_labeling_data table
--- ==================================================================
+--- ===================================================================
+--- initial_labeling.sql
+--- Purpose: Generate investment rating labels (low/medium/high) 
+---          for companies based on sector-level median financial indicators.
+--- Input: raw_data table (imported from raw_data.csv)
+--- Output: initial_labeling_data table
+--- ===================================================================
 
--- Step 1: Calculate medians per sector + cumulation period
+--- Step 1: Calculate medians per sector + cumulation period ---
 WITH sector_medians AS (
     SELECT 
         sector,
@@ -20,7 +20,7 @@ WITH sector_medians AS (
     GROUP BY sector, cumulation
 ),
 
--- Step 2: Calculate score for each company based on indicators above sector median
+--- Step 2: Calculate score for each company based on indicators above sector median ---
 scores AS (
     SELECT
         d.id,
@@ -37,7 +37,7 @@ scores AS (
      AND d.cumulation = s.cumulation
 )
 
--- Step 3: Assign investment_level based on score
+--- Step 3: Assign investment_level based on score ---
 CREATE TABLE initial_labeling_data AS 
 SELECT 
     r.*,
@@ -45,7 +45,7 @@ SELECT
         WHEN s.score <= 1 THEN 'low' 
         WHEN s.score <= 3 THEN 'medium' 
         ELSE 'high' 
-    END AS investment_level
+    END AS investment_rating
 FROM raw_data r
 LEFT JOIN scores s 
 ON r.id = s.id;
