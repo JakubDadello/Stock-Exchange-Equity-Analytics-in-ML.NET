@@ -1,9 +1,11 @@
 # Polish-Equity-Analytics-.NET-LightGBM-Predictor
 
 ## Project Description
-This project is an enterprise-grade evolution of the Polish-Equity-Analytics system (https://github.com/JakubDadello/Polish-Equity-Analytics.git). It utilizes C# and ML.NET to analyze financial data from 370 Polish listed companies (GPW).
+Developed an enterprise-grade evolution of the Polish-Equity-Analytics system (https://github.com/JakubDadello/Polish-Equity-Analytics.git) using C# and ML.NET to analyze financial data from 370 companies listed on the Warsaw Stock Exchange.
 
-The system incorporates sector-specific characteristics to support investment decision-making by classifying companies into three investment rating: Low, Medium, and High.
+Built a machine learning pipeline that incorporates sector-specific features to classify companies into three investment ratings: Low, Medium, and High, supporting data-driven investment decision-making.
+
+The project demonstrates both technical ML skills and financial domain knowledge, with universally applicable indicators such as ROA and EBITDA, making the methodology transferable to global financial markets.
 
 ### Key Features
 1. Technology Shift: Transitioned from Python to the .NET 10 ecosystem for better performance and enterprise integration.
