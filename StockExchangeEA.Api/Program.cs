@@ -4,7 +4,7 @@ using Schemas;
 var builder = WebApplication.CreateBuilder(args);
 
 // Register the ML.NET PredictionEnginePool
-// English: Using PredictionEnginePool for thread-safe, scalable object pooling
+// Using PredictionEnginePool for thread-safe, scalable object pooling
 // This is essential for high-concurrency environments like a web API
 builder.Services.AddPredictionEnginePool<ModelInput, ModelOutput>()
     .FromFile("LightGBM_model.zip");
@@ -12,7 +12,7 @@ builder.Services.AddPredictionEnginePool<ModelInput, ModelOutput>()
 var app = builder.Build();
 
 // Prediction Endpoint
-// English: Minimal API endpoint for high-performance ML inference
+// Minimal API endpoint for high-performance ML inference
 app.MapPost("/predict", (PredictionEnginePool<ModelInput, ModelOutput> pool, ModelInput input) =>
 {
     // English: Executing the model prediction using the pooled engine
