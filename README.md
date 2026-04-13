@@ -1,4 +1,4 @@
-# Polish-Equity-Analytics-.NET-LightGBM-Predictor
+# Stock-Exchange-Equity-Analytics-in-ML.NET
 
 ## Project Description
 Developed an enterprise-grade evolution of the Stock-Exchange-Equity-Analytics system (https://github.com/JakubDadello/Stock-Exchange-Equity-Analytics.git) using C# and ML.NET to analyze financial data from 370 companies listed on the Warsaw Stock Exchange.
