@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Polish-Equity-Analytics-.NET-LightGBM-Predictor\\PolishEquity.Analytics.Schemas\\PolishEquity.Analytics.Schemas.csproj": {}
+    "C:\\Stock-Exchange-Equity-Analytics-in-ML.NET\\StockExchangeEA.Schemas\\StockExchangeEA.Schemas.csproj": {}
   },
   "projects": {
-    "C:\\Polish-Equity-Analytics-.NET-LightGBM-Predictor\\PolishEquity.Analytics.Schemas\\PolishEquity.Analytics.Schemas.csproj": {
+    "C:\\Stock-Exchange-Equity-Analytics-in-ML.NET\\StockExchangeEA.Schemas\\StockExchangeEA.Schemas.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Polish-Equity-Analytics-.NET-LightGBM-Predictor\\PolishEquity.Analytics.Schemas\\PolishEquity.Analytics.Schemas.csproj",
-        "projectName": "PolishEquity.Analytics.Schemas",
-        "projectPath": "C:\\Polish-Equity-Analytics-.NET-LightGBM-Predictor\\PolishEquity.Analytics.Schemas\\PolishEquity.Analytics.Schemas.csproj",
+        "projectUniqueName": "C:\\Stock-Exchange-Equity-Analytics-in-ML.NET\\StockExchangeEA.Schemas\\StockExchangeEA.Schemas.csproj",
+        "projectName": "StockExchangeEA.Schemas",
+        "projectPath": "C:\\Stock-Exchange-Equity-Analytics-in-ML.NET\\StockExchangeEA.Schemas\\StockExchangeEA.Schemas.csproj",
         "packagesPath": "C:\\Users\\kejdi\\.nuget\\packages\\",
-        "outputPath": "C:\\Polish-Equity-Analytics-.NET-LightGBM-Predictor\\PolishEquity.Analytics.Schemas\\obj\\",
+        "outputPath": "C:\\Stock-Exchange-Equity-Analytics-in-ML.NET\\StockExchangeEA.Schemas\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

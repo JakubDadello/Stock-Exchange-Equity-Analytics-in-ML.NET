@@ -18,8 +18,8 @@ The project demonstrates both technical ML skills and financial domain knowledge
 
 ## Repository Structure
 - `StockExchangeEA.Api/` - Model Serving & Inference: ASP.NET Core Web API providing real-time investment grading predictions via REST endpoints.
-- `StockExchangeEA.Schemas` - Data Contracts: Shared Class Library containing strictly typed input/output models used across the entire solution. see [Schemas.cs](PolishEquity.Analytics.Schemas/Schemas/Schemas.cs)
-- `StockExchangeEA.Trainer/` - ML Pipeline: Console application dedicated to Data Preprocessing, LightGBM Model Training, and Evaluation. see [PolishEquity.Analytics.Trainer/README.md](PolishEquity.Analytics.Trainer/README.md)
+- `StockExchangeEA.Schemas` - Data Contracts: Shared Class Library containing strictly typed input/output models used across the entire solution. see [Schemas.cs](StockExchangeEA.Schemas/Schemas/Schemas.cs)
+- `StockExchangeEA.Trainer/` - ML Pipeline: Console application dedicated to Data Preprocessing, LightGBM Model Training, and Evaluation. see [StockExchangeEA.Trainer/README.md](StockExchangeEA.Trainer/README.md)
 - `CRISP-DM.md` - detailed methodology workflow
 
 ## How to Run

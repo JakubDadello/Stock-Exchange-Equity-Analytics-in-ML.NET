@@ -1,4 +1,4 @@
-# PolishEquity.Analytics.Trainer
+# StockExchangeEA.Trainer
 This directory contains the core machine learning logic, data ingestion, preprocessing pipeline for the project. 
 
 ## Directory structure

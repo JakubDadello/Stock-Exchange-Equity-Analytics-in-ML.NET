@@ -6,14 +6,14 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v10.0": {
-      "PolishEquity.Analytics.Trainer/1.0.0": {
+      "StockExchangeEA.Trainer/1.0.0": {
         "dependencies": {
           "Microsoft.ML": "5.0.0",
           "Microsoft.ML.LightGbm": "5.0.0",
-          "PolishEquity.Analytics.Schemas": "1.0.0"
+          "StockExchangeEA.Schemas": "1.0.0"
         },
         "runtime": {
-          "PolishEquity.Analytics.Trainer.dll": {}
+          "StockExchangeEA.Trainer.dll": {}
         }
       },
       "LightGBM/4.6.0": {
@@ -257,12 +257,12 @@
           }
         }
       },
-      "PolishEquity.Analytics.Schemas/1.0.0": {
+      "StockExchangeEA.Schemas/1.0.0": {
         "dependencies": {
           "Microsoft.ML": "5.0.0"
         },
         "runtime": {
-          "PolishEquity.Analytics.Schemas.dll": {
+          "StockExchangeEA.Schemas.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -271,7 +271,7 @@
     }
   },
   "libraries": {
-    "PolishEquity.Analytics.Trainer/1.0.0": {
+    "StockExchangeEA.Trainer/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -346,7 +346,7 @@
       "path": "system.numerics.tensors/9.0.4",
       "hashPath": "system.numerics.tensors.9.0.4.nupkg.sha512"
     },
-    "PolishEquity.Analytics.Schemas/1.0.0": {
+    "StockExchangeEA.Schemas/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

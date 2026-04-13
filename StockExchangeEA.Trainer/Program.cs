@@ -13,7 +13,7 @@ class Program
         // Define paths
         // In Docker, these should point to your shared volumes
         string dataPath = Path.Combine("Data", "initial_labeling_data.csv");
-        string modelPath = Path.Combine("..", "PolishEquity.Analytics.Api", "Models", "LightGBM_model.zip");
+        string modelPath = Path.Combine("..", "StockExchangeEA.Api", "Models", "LightGBM_model.zip");
 
         Console.WriteLine("Loading data...");
         // 2. Load Data from CSV

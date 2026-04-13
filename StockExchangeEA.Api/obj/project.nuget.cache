@@ -2,7 +2,7 @@
   "version": 2,
   "dgSpecHash": "8lFqOZfvr20=",
   "success": true,
-  "projectFilePath": "C:\\Polish-Equity-Analytics-.NET-LightGBM-Predictor\\PolishEquity.Analytics.Api\\PolishEquity.Analytics.Api.csproj",
+  "projectFilePath": "C:\\Stock-Exchange-Equity-Analytics-in-ML.NET\\.Api\\StockExchangeEA.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\kejdi\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\9.0.4\\microsoft.bcl.asyncinterfaces.9.0.4.nupkg.sha512",
     "C:\\Users\\kejdi\\.nuget\\packages\\microsoft.extensions.ml\\5.0.0\\microsoft.extensions.ml.5.0.0.nupkg.sha512",

@@ -333,17 +333,17 @@
           "buildTransitive/net8.0/_._": {}
         }
       },
-      "PolishEquity.Analytics.Schemas/1.0.0": {
+      "StockExchangeEA.Schemas/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
         "dependencies": {
           "Microsoft.ML": "5.0.0"
         },
         "compile": {
-          "bin/placeholder/PolishEquity.Analytics.Schemas.dll": {}
+          "bin/placeholder/StockExchangeEA.Schemas.dll": {}
         },
         "runtime": {
-          "bin/placeholder/PolishEquity.Analytics.Schemas.dll": {}
+          "bin/placeholder/StockExchangeEA.Schemas.dll": {}
         }
       }
     }
@@ -610,17 +610,17 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "PolishEquity.Analytics.Schemas/1.0.0": {
+    "StockExchangeEA.Schemas/1.0.0": {
       "type": "project",
-      "path": "../PolishEquity.Analytics.Schemas/PolishEquity.Analytics.Schemas.csproj",
-      "msbuildProject": "../PolishEquity.Analytics.Schemas/PolishEquity.Analytics.Schemas.csproj"
+      "path": "../StockExchangeEA.Schemas/StockExchangeEA.Schemas.csproj",
+      "msbuildProject": "../StockExchangeEA.Schemas/StockExchangeEA.Schemas.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net10.0": [
       "Microsoft.ML >= 5.0.0",
       "Microsoft.ML.LightGbm >= 5.0.0",
-      "PolishEquity.Analytics.Schemas >= 1.0.0"
+      "StockExchangeEA.Schemas >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -630,11 +630,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Polish-Equity-Analytics-.NET-LightGBM-Predictor\\PolishEquity.Analytics.Trainer\\PolishEquity.Analytics.Trainer.csproj",
-      "projectName": "PolishEquity.Analytics.Trainer",
-      "projectPath": "C:\\Polish-Equity-Analytics-.NET-LightGBM-Predictor\\PolishEquity.Analytics.Trainer\\PolishEquity.Analytics.Trainer.csproj",
+      "projectUniqueName": "C:\\Stock-Exchange-Equity-Analytics-in-ML.NET\\StockExchangeEA.Trainer\\StockExchangeEA.Trainer.csproj",
+      "projectName": "StockExchangeEA.Trainer",
+      "projectPath": "C:\\Stock-Exchange-Equity-Analytics-in-ML.NET\\StockExchangeEA.Trainer\\StockExchangeEA.Trainer.csproj",
       "packagesPath": "C:\\Users\\kejdi\\.nuget\\packages\\",
-      "outputPath": "C:\\Polish-Equity-Analytics-.NET-LightGBM-Predictor\\PolishEquity.Analytics.Trainer\\obj\\",
+      "outputPath": "C:\\Stock-Exchange-Equity-Analytics-in-ML.NET\\StockExchangeEA.Trainer\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -656,8 +656,8 @@
         "net10.0": {
           "targetAlias": "net10.0",
           "projectReferences": {
-            "C:\\Polish-Equity-Analytics-.NET-LightGBM-Predictor\\PolishEquity.Analytics.Schemas\\PolishEquity.Analytics.Schemas.csproj": {
-              "projectPath": "C:\\Polish-Equity-Analytics-.NET-LightGBM-Predictor\\PolishEquity.Analytics.Schemas\\PolishEquity.Analytics.Schemas.csproj"
+            "C:\\Stock-Exchange-Equity-Analytics-in-ML.NET\\StockExchangeEA.Schemas\\StockExchangeEA.Schemas.csproj": {
+              "projectPath": "C:\\Stock-Exchange-Equity-Analytics-in-ML.NET\\StockExchangeEA.Schemas\\StockExchangeEA.Schemas.csproj"
             }
           }
         }
