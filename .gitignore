@@ -1,0 +1,57 @@
+# -------------------------
+# .NET build artifacts
+# -------------------------
+bin/
+obj/
+
+# -------------------------
+# Visual Studio
+# -------------------------
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# -------------------------
+# Rider / VS Code
+# -------------------------
+.idea/
+.vscode/
+
+# -------------------------
+# Logs
+# -------------------------
+*.log
+
+# -------------------------
+# OS files
+# -------------------------
+.DS_Store
+Thumbs.db
+
+# -------------------------
+# NuGet
+# -------------------------
+*.nupkg
+*.snupkg
+project.assets.json
+*.nuget.props
+*.nuget.targets
+
+# -------------------------
+# Build results
+# -------------------------
+TestResults/
+*.Build.cs
+
+# -------------------------
+# Publish output
+# -------------------------
+publish/
+
+# -------------------------
+# Environment / secrets
+# -------------------------
+appsettings.Development.json
+.env
