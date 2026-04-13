@@ -26,23 +26,6 @@ The project demonstrates both technical ML skills and financial domain knowledge
 
 To run this project locally, you can use either Docker (recommended) or the .NET SDK.
 
-### Using Docker 
-* **Docker Compose:**
-  ```bash
-  docker-compose up --build
-
-* **Build the image:**
-  ```bash
-  docker build -t pqa_dotnet_api -f PolishEquity.Analytics.Api/Dockerfile .
-* **Run the container:**
-  ```bash
-  docker run -d -p 8001:8080 --name pqa_dotnet_container pqa_dotnet_api
-
-### Using ASP.NET Core (Local Environment)
-
-* **Launch ASP.NET Core binding to all interfaces:**
-  ```bash
-  dotnet run --urls "http://0.0.0.0:8000"
 
 ## Tech Stack
 
