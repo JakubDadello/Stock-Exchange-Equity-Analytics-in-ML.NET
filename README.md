@@ -33,6 +33,7 @@ To run this project locally, you can use either Docker (recommended) or the .NET
 - Machine Learning Framework: ML.NET (Microsoft.ML)
 - Data Preprocessing: LINQ, Microsoft.Data.Analysis
 - API Framework: ASP.NET Core 
-- Conterization & Deployment: Docker
+- Conterization & Deployment: Docker, Kubernetes
+- IaC: Terraform (HCL) 
 
 Consistent with the research conducted in the Stock-Exchange-Equity-Analytics system (https://github.com/JakubDadello/Stock-Exchange-Equity-Analytics.git), this repository maintains the same data processing standards. The documentation aligns with the original project's structure but is adapted for the ML.NET ecosystem. Detailed process descriptions are available in [CRISP-DM.md](CRISP-DM.md).
