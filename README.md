@@ -3,7 +3,7 @@
 ## Project Description
 Developed an enterprise-grade evolution of the Stock-Exchange-Equity-Analytics system (https://github.com/JakubDadello/Stock-Exchange-Equity-Analytics.git) using C# and ML.NET to analyze financial data from 370 companies listed on the Warsaw Stock Exchange.
 
-Built a machine learning pipeline that incorporates sector-specific features to classify companies into three investment ratings: Low, Medium, and High, supporting data-driven investment decision-making.
+Reimplemented the original project using an alternative technology stack, showcasing ability to adapt architecture and tools to different environments.
 
 The project demonstrates both technical ML skills and financial domain knowledge, with universally applicable indicators such as ROA and EBITDA, making the methodology transferable to global financial markets.
 
