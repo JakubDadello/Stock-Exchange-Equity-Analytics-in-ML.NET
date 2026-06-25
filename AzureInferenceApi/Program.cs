@@ -1,34 +1,23 @@
+using Microsoft.Extensions.ML;
+using Schemas;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+builder.Services.AddPredictionEnginePool<ModelInput, ModelOutput>()
+    .FromFile("models/LightGBM_model.zip");
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-
-app.UseHttpsRedirection();
-
-var summaries = new[]
+app.MapPost("/predict", (PredictionEnginePool<ModelInput, ModelOutput> predictionEnginePool, ModelInput input) =>
 {
-    "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-};
+    if (input == null)
+    {
+        return Results.BadRequest("Input data cannot be null.");
+    }
 
-app.MapGet("/weatherforecast", () =>
-{
-    var forecast =  Enumerable.Range(1, 5).Select(index =>
-        new WeatherForecast
-        (
-            DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-            Random.Shared.Next(-20, 55),
-            summaries[Random.Shared.Next(summaries.Length)]
-        ))
-        .ToArray();
-    return forecast;
+    ModelOutput prediction = predictionEnginePool.Predict(input);
+
+    return Results.Ok(prediction);
 });
 
 app.Run();
-
-record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
-{
-    public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
-}
