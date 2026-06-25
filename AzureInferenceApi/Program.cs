@@ -1,7 +1,20 @@
-using AzureInferenceApi;
+using Microsoft.Azure.Functions.Worker;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.ML;
+using Schemas;
 
-var builder = Host.CreateApplicationBuilder(args);
-builder.Services.AddHostedService<Worker>();
+var host = new HostBuilder()
+    .ConfigureFunctionsWebApplication()
+    .ConfigureServices(services =>
+    {
+        services.AddApplicationInsightsTelemetryWorkerService();
+        services.ConfigureFunctionsApplicationInsights();
 
-var host = builder.Build();
+        // Rejestracja Twojego modelu
+        services.AddPredictionEnginePool<ModelInput, ModelOutput>()
+            .FromFile("LightGBM_model.zip");
+    })
+    .Build();
+
 host.Run();
